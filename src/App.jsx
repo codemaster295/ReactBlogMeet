@@ -17,9 +17,21 @@ import Sass from "./Pages/sass/Sass";
 import ReactBlog from "./Pages/react/ReactBlog";
 
 const App = () => {
+  const showNav = () =>{
+    const sidebar = document.querySelector('.sidebar');
+    sidebar.classList.toggle("animationClass")
+    
+    const addclass = () =>{
+        sidebar.classList.add("animationClass")
+    }
+    setInterval(addclass , 100)
+    
+    
+} 
   return (
     <Router>
       <div className="App">
+        <div className="sidemenu" onMouseOver={showNav}></div>
         <Sidebar />
 
         <Switch>

@@ -1,10 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './sidebar.scss'
 import { Link } from 'react-router-dom'
 
 function Sidebar() {
+    
     const openNav = () => {
-        let sidebar = document.querySelector('.sidebar');
+        
+        const sidebar = document.querySelector('.sidebar');
+        const app = document.querySelector(".blogbox");
+        // app.classList.toggle("openSide")
+
         sidebar.classList.toggle("open")
         console.log(sidebar)
         const menuBtnChange = () => {
@@ -19,7 +24,7 @@ function Sidebar() {
         menuBtnChange()
     }
     const searchOpen = () => {
-        let sidebar = document.querySelector('.sidebar');
+        const sidebar = document.querySelector('.sidebar');
         sidebar.classList.toggle("open")
         const menuBtnChange = () => {
             let sidebar = document.querySelector('.sidebar');
@@ -32,10 +37,11 @@ function Sidebar() {
         }
         menuBtnChange()
     }
-
+     
+    
     return (
 
-        <div className="sidebar">
+        <div className="sidebar animationClass">
             <div className="logo-details">
                 <i class='bx bxl-blogger icon'></i>
                 <div className="logo_name">BlogDaily</div>
@@ -138,6 +144,7 @@ function Sidebar() {
                     </li>
                 </Link>
                 <Link to='/Github'>
+	
                     <li>
                         <span className="link">
                             <i class='bx bxl-git' ></i>
@@ -155,14 +162,12 @@ function Sidebar() {
                         <span className="tooltip">Sass</span>
                     </li>
                 </Link>
-                <li className="profile">
-                    <div className="profile-details">
-                        <div className="name_job">
-                            <div className="name">Meet Moradiya</div>
-                            <div className="job">React Developer</div>
-                        </div>
-                    </div>
-                    <i class='bx bx-pencil' id="log_out" ></i>
+                <li>
+                    <span className="link">
+                            <i class='bx bxl-wordpress Meet'></i>
+                            <span className="links_name">Meet Moradiya</span>
+                    </span>
+                    <span className="tooltip">Sass</span>
                 </li>
             </ul>
         </div>

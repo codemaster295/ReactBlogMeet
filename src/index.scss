@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -8,13 +10,15 @@
     --themeColor: #fcde67;
     --headingColor: #030e12;
     --boxColor: #5bccf6;
+    --fontLato:'Lato', sans-serif;
     
     
 }
 
 body{
-    background: var(--boxColor);
+    background:white
 }
+
 
 // .header {
 //     .nav {

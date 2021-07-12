@@ -1,3 +1,16 @@
 :root{
     --main-color: #0b0b0b
 }
+.App{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .sidemenu{
+        width:5px;
+        height:100vh;
+        position: fixed;
+        left:0;
+        top:0;
+        background:black;
+    }
+}

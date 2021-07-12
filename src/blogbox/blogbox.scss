@@ -1,34 +1,94 @@
-.container {
-    width: 70%;
-    margin:0 auto;
-	 
-	.box{
-        width: 40%;
+.cardWrapper{
+    width:340px;
+    background: white;
+    box-shadow: 1px 1px 15px var(--headingColor);
+    border-radius: 9px;
+    overflow: hidden;
+    .info{
         padding:10px;
-        background: white;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;  
-        box-shadow: 1px 1px 40px var(--headingColor); 
-        border-radius:5px; 
-        
         .title{
             font-size:20px;
             color:var(--headingColor);
-            font-weight: 500;
+            font-weight:600;
+            letter-spacing: 2px;
+            text-transform: capitalize;
+            margin:10px 0;
+
+        }
+        .link{
+            font-size:17px;
+            font-weight:600;
             letter-spacing: 1.5px;
+            color:var(--boxColor);
+            cursor: pointer;
+            text-decoration: underline;
+            margin:10px 0;
         }
-        img{
-            padding: 20px;
-           width:100%;
-           
+        .timeSection{
+            display: flex;
+            align-items: center;
+            color:gray;
+            margin:10px 0;
+            i{
+                font-weight:bolder
+            }
+            .time{
+                margin-left:15px;
+                font-size: 15px;
+                font-weight:bolder
+            }
         }
-        .summary{
-            font-size:15px;
-            font-weight: bold;
-            letter-spacing: .2em;
-            text-align: center;
+        .commentsSection{
+            display: flex;
+            align-items: center;
+            color:gray;
+            margin:10px 0;
+            i{
+                font-weight:bolder
+            }
+            .commentNumber{
+                margin-left:15px;
+                font-size: 15px;
+                font-weight:bolder
+            }
         }
     }
+.card{
+    width:100%;
+    position: relative;
+    display: flex;
+    justify-content: start;
+    align-items: flex-end;
+    .cardImage{
+        max-width: 100%;
+        height:auto;
+        position: relative;
+    }
+    .dateCircle{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        right:5%;
+        transform: translate(-5%, -5%);
+        top:5%;
+        color:white;
+        font-weight: 900;    
+        font-size:20px;
+        }
+        .category{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background:var(--boxColor) ;
+            padding:5px 15px;
+            color: var(--headingColor);
+            position: absolute;            
+            line-height: 25px;
+            font-family: var(--fontLato);
+            font-weight: 900;
+            letter-spacing: 2px;
+
+        }
+}
 }
