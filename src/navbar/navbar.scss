@@ -1,0 +1,92 @@
+.header{
+    width:20%;
+    height:100vh;
+    position:fixed;
+    left:0;
+    top:0;
+   
+    .nav{
+        height: 100%;
+        width:100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        .burger{
+            color: var(--headingColor);
+            font-size: 40px;
+            
+            .burgerBtn{
+                font-size: 50px !important;
+                color: var(--headingColor);
+                width:25%;
+                
+                
+                
+            }
+        }
+        .logo{
+            display: flex;
+            width:100%;
+            
+            align-items: center;
+            
+            span{
+                color: var(--headingColor);
+                font-size: 30px;
+                font-weight: 600;
+            }
+        }
+        .navIn{
+            height:100%;
+            width:100%;
+            
+            ul{
+                min-height:100%;
+                width:20rem;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                flex-direction: column;
+                position: relative;
+                clip-path: inset(0% 75% 0% 0%);
+                transition: all 0.5s ease;
+               
+                &.openNav{
+                    
+                    clip-path: inset(0% 0% 0% 0%);
+                }
+                .closer{
+                    right:0;
+                    top:0;
+                    height:100%;
+                    width:100%;
+                    background:var(--themeColor);
+                position: absolute;
+                transition: all 0.5s ease;
+                &.openNav{
+                    width:0; 
+                }
+                }
+                li{
+                    width:70%;
+                    display: flex;
+                    align-items: center;
+                    list-style: none;
+                    .logo{
+                        font-size: 30px;
+                        font-weight:600;
+                        color:var(--headingColor)
+                    }
+                    span{
+                        display: flex;
+                        margin-left:10px;
+                        text-decoration: none;
+                        color: var(--headingColor);
+                        font-size:20px;
+                    }
+                }
+            }
+        }
+    }
+}
