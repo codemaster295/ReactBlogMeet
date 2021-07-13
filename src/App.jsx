@@ -21,6 +21,8 @@ const App = () => {
     const sidebar = document.querySelector('.sidebar');
     sidebar.classList.toggle("animationClass")
     
+    
+    
     const addclass = () =>{
         sidebar.classList.add("animationClass")
     }

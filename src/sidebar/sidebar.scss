@@ -20,15 +20,17 @@ a{
 	transition: all 0.6s ease;
 	&.animationClass{
 		animation: hide 2s linear 5s 1 forwards;
-		transition: all 0.5s linear;
 		
 	}
+	
+	
 	
 	
 	
 	@keyframes hide {
 		to{
 			left:-50%;
+			
 		}
 	}
 	

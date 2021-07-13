@@ -167,7 +167,7 @@ function Sidebar() {
                             <i class='bx bxl-wordpress Meet'></i>
                             <span className="links_name">Meet Moradiya</span>
                     </span>
-                    <span className="tooltip">Sass</span>
+                    <span className="tooltip">Meet Moradiya</span>
                 </li>
             </ul>
         </div>
