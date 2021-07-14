@@ -38,9 +38,9 @@ const CreateNewBlog = () => {
     }
     const summaryModified = (event) => {
         setSummary(event.target.value)
-        
+
     }
-    const imageLink = (event) =>{
+    const imageLink = (event) => {
         setImage(event.target.value)
 
     }
@@ -54,7 +54,7 @@ const CreateNewBlog = () => {
                 setImage(reacentImageDataUrl);
             }
         })
-        
+
 
 
 
@@ -66,40 +66,63 @@ const CreateNewBlog = () => {
     }
     const submitBlog = (event) => {
         event.preventDefault()
+        let formData = {
+            blogTitle: title,
+            blogImage: image,
+            blogSummarry: summary
+        }
+        localStorage.setItem('formData', JSON.stringify(formData));
+        dispData();
+
+    }
+    
+    const dispData = () => {
+        console.log(JSON.parse((localStorage.getItem('formData'))).blogTitle)
     }
     const formSubmit = () => {
         document.body.render(
+            
+            )
+        }
+        const getData = () => {
+            let url="http://localhost:3000"
+             fetch(url).then((response)=>{
+                 return response.text();
+             }).then((data)=>{
+                 console.log(data)
+             })
+        
+        }
+        
 
-        )
-    }
     return (
         <>
-      
-        <div className="form">
-            <form onSubmit={formSubmit}>
-                <div className="title">
-                    <label>Title:-</label>
-                    <input type="text" onChange={titleModified} />
-                </div>
-                <div className="imageLink">
-                    <label>Enter The Link</label>
-                    <input type="url" onChange={imageLink}/>
-                </div>
-                <div className="image">
-                    <label>Image:-</label>
-                    <input type="file" id="imageUploader" onChange={imageModified} placeholder="Paste The Link Here" />
-                </div>
-                <div className="summary" onChange={summaryModified}>
-                    <label>Details:-</label>
-                    <textarea name="" id="" cols="50" rows="4"></textarea>
-                </div>
-                <button className="submit" onClick={submitBlog}>Submit</button>
-            </form>
-            
-            <BlogMain img={image} title={title} summary={summary} />
 
-        </div>
-    </>
+            <div className="form">
+                <form onSubmit={formSubmit}>
+                    <div className="title">
+                        <label>Title:-</label>
+                        <input type="text" onChange={titleModified} />
+                    </div>
+                    <div className="imageLink">
+                        <label>Enter The Link</label>
+                        <input type="url" onChange={imageLink} />
+                    </div>
+                    <div className="image">
+                        <label>Image:-</label>
+                        <input type="file" id="imageUploader" onChange={imageModified} placeholder="Paste The Link Here" />
+                    </div>
+                    <div className="summary" onChange={summaryModified}>
+                        <label>Details:-</label>
+                        <textarea name="" id="" cols="50" rows="4"></textarea>
+                    </div>
+                    <button className="submit" onClick={submitBlog}>Submit</button>
+                </form>
+
+                <BlogMain img={image} title={title} summary={summary} />
+
+            </div>
+        </>
     )
 }
 

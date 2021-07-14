@@ -29,6 +29,7 @@ const App = () => {
     setInterval(addclass , 100)
     
     
+    
 } 
   return (
     <Router>
