@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
+import React from 'react'
 import BlogBox from '../../blogbox/BlogBox'
-import Sidebar from '../../sidebar/Sidebar'
+
 import './react.scss'
 
 function ReactBlog() {
@@ -51,6 +51,7 @@ function ReactBlog() {
 
     return (
         <div className="blogbox" >
+            
            {
                title.map((props ,i)=>
                <BlogBox

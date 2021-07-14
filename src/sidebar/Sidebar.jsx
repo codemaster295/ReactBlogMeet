@@ -1,4 +1,3 @@
-import React, { useState } from 'react'
 import './sidebar.scss'
 import { Link } from 'react-router-dom'
 
@@ -7,7 +6,6 @@ function Sidebar() {
     const openNav = () => {
         
         const sidebar = document.querySelector('.sidebar');
-        const app = document.querySelector(".blogbox");
         // app.classList.toggle("openSide")
 
         sidebar.classList.toggle("open")
@@ -43,7 +41,7 @@ function Sidebar() {
 
         <div className="sidebar animationClass">
             <div className="logo-details">
-                <i class='bx bxl-blogger icon'></i>
+                <i className='bx bxl-blogger icon'></i>
                 <div className="logo_name">BlogDaily</div>
                 <i className='bx bx-menu closeBtn' onClick={openNav}  ></i>
             </div>
@@ -56,7 +54,7 @@ function Sidebar() {
                 <Link to='ReactBlog'>
                     <li>
                         <span className="link">
-                            <i class='bx bxl-react' ></i>
+                            <i className='bx bxl-react' ></i>
                             <span className="links_name">React</span>
                         </span>
                         <span className="tooltip">React</span>
@@ -65,7 +63,7 @@ function Sidebar() {
                 <Link to='/Angular'>
                     <li>
                         <span className="link">
-                            <i class='bx bxl-angular' ></i>
+                            <i className='bx bxl-angular' ></i>
                             <span className="links_name">Angular</span>
                         </span>
                         <span className="tooltip">Angular</span>
@@ -74,7 +72,7 @@ function Sidebar() {
                 <Link to='/Shopify'>
                     <li>
                         <span className="link">
-                            <i class='bx bxl-shopify' ></i>
+                            <i className='bx bxl-shopify' ></i>
                             <span className="links_name">Shopify</span>
                         </span>
                         <span className="tooltip">Shopify</span>
@@ -83,7 +81,7 @@ function Sidebar() {
                 <Link to='/BootStrap'>
                     <li>
                         <span className="link">
-                            <i class='bx bxl-bootstrap' ></i>
+                            <i className='bx bxl-bootstrap' ></i>
                             <span className="links_name">Bootstrap</span>
                         </span>
                         <span className="tooltip">Bootstrap</span>
@@ -92,7 +90,7 @@ function Sidebar() {
                 <Link to='/Python'>
                     <li>
                         <span className="link">
-                            <i class='bx bxl-python' ></i>
+                            <i className='bx bxl-python' ></i>
                             <span className="links_name">Python</span>
                         </span>
                         <span className="tooltip">Python</span>
@@ -101,7 +99,7 @@ function Sidebar() {
                 <Link to='/Magento'>
                     <li>
                         <span className="link">
-                            <i class='bx bxl-magento' ></i>
+                            <i className='bx bxl-magento' ></i>
                             <span className="links_name">Magento</span>
                         </span>
                         <span className="tooltip">Magento</span>
@@ -110,7 +108,7 @@ function Sidebar() {
                 <Link to='/WordPress'>
                     <li>
                         <span className="link">
-                            <i class='bx bxl-wordpress' ></i>
+                            <i className='bx bxl-wordpress' ></i>
                             <span className="links_name">WordPress</span>
                         </span>
                         <span className="tooltip">WordPress</span>
@@ -119,7 +117,7 @@ function Sidebar() {
                 <Link to='/VueJs'>
                     <li>
                         <span className="link">
-                            <i class='bx bxl-vuejs' ></i>
+                            <i className='bx bxl-vuejs' ></i>
                             <span className="links_name">VueJS</span>
                         </span>
                         <span className="tooltip">VueJS</span>
@@ -128,7 +126,7 @@ function Sidebar() {
                 <Link to='/Redux'>
                     <li>
                         <span className="link">
-                            <i class='bx bxl-redux' ></i>
+                            <i className='bx bxl-redux' ></i>
                             <span className="links_name">Redux</span>
                         </span>
                         <span className="tooltip">Redux</span>
@@ -137,7 +135,7 @@ function Sidebar() {
                 <Link to='/NodeJs'>
                     <li>
                         <span className="link">
-                            <i class='bx bxl-nodejs' ></i>
+                            <i className='bx bxl-nodejs' ></i>
                             <span className="links_name">Nodejs</span>
                         </span>
                         <span className="tooltip">Nodejs</span>
@@ -147,7 +145,7 @@ function Sidebar() {
 	
                     <li>
                         <span className="link">
-                            <i class='bx bxl-git' ></i>
+                            <i className='bx bxl-git' ></i>
                             <span className="links_name">Github</span>
                         </span>
                         <span className="tooltip">Github</span>
@@ -156,7 +154,7 @@ function Sidebar() {
                 <Link to='/Sass'>
                     <li>
                         <span className="link">
-                            <i class='bx bxl-sass' ></i>
+                            <i className='bx bxl-sass' ></i>
                             <span className="links_name">Sass</span>
                         </span>
                         <span className="tooltip">Sass</span>
@@ -164,7 +162,7 @@ function Sidebar() {
                 </Link>
                 <li>
                     <span className="link">
-                            <i class='bx bxl-wordpress Meet'></i>
+                            <i className='bx bxl-wordpress Meet'></i>
                             <span className="links_name">Meet Moradiya</span>
                     </span>
                     <span className="tooltip">Meet Moradiya</span>

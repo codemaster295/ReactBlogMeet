@@ -1,0 +1,30 @@
+.mainWrapper{
+    width:70%;
+    background: white;
+    margin:0 auto;
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+    flex-direction: column;
+    .title{
+        margin:50px auto;
+        font-size: 35px;
+        color:var(--headingColor);
+        letter-spacing: 5px;
+    }
+
+    img{
+        width:70%;
+        margin:0 auto;
+        height:300px;
+        object-fit: cover;
+    }
+    .summary{
+        font-size: 17px;
+        font-weight:600;
+        color:var(--headingColor);
+        width:70%;
+        margin:0 auto;
+        margin:50px auto;
+    }
+}

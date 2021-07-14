@@ -1,5 +1,4 @@
 import "./app.scss"
-import BlogBox from "./blogbox/BlogBox"
 import Sidebar from "./sidebar/Sidebar";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import React from "./Pages/react/ReactBlog";
@@ -15,6 +14,7 @@ import NodeJs from "./Pages/nodejs/NodeJs";
 import Github from "./Pages/github/Github";
 import Sass from "./Pages/sass/Sass";
 import ReactBlog from "./Pages/react/ReactBlog";
+import CreateNewBlog from "./Pages/CreateNewBlog/CreateNewBlog";
 
 const App = () => {
   const showNav = () =>{
@@ -38,7 +38,7 @@ const App = () => {
 
         <Switch>
 
-          <Route path="/" exact component={ReactBlog} />
+          <Route path="/" exact component={CreateNewBlog} />
           <Route path="/ReactBlog" component={ReactBlog} />
           <Route path="/Angular" component={Angular} />
           <Route path="/Shopify" component={Shopify} />
