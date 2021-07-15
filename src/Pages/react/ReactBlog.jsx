@@ -1,15 +1,27 @@
-import React from 'react'
+import React,{useEffect,useState} from 'react'
 import BlogBox from '../../blogbox/BlogBox'
+import CreateNewBlog from '../CreateNewBlog/CreateNewBlog'
+import { useLocation } from "react-router-dom";
+
 
 import './react.scss'
 
-function ReactBlog() {
+function ReactBlog(props) {
+    const location = useLocation();
+    const [card,setCard]= useState({});
+    useEffect(() => {
+        let data = location?.state?.carddata;
+        setCard(data); // result: 'some_value'
+     }, [location]);
+
+     console.log("[][][][][][]",card)
+
     const title = ["What Is react?",
         "how to make a react project",
         "latest news of the react",
         "The Plan for React 18",
         "React v17.0",
-        "React v16.9.0 and the Roadmap",
+        "React v16.9.0 ",
         "React v16.8: The One With Hooks",
         "React 16.x Roadmap",
         "Introducing the React Profiler",
@@ -42,14 +54,24 @@ function ReactBlog() {
         "1.5K","500", "50"
 
     ]
+    const generateNewBlog = (event) => {
+        
+       
+    }
+
 
         
     
-    
+    const getData = (data )=>{
+       alert()
+    }
+  
+   
     
    
 
     return (
+        <>
         <div className="blogbox" >
             
            {
@@ -65,6 +87,8 @@ function ReactBlog() {
            }
          
         </div>
+           <CreateNewBlog onPassed={getData} />
+    </>
     )
 }
 
