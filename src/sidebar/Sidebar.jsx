@@ -160,13 +160,16 @@ function Sidebar() {
                         <span className="tooltip">Sass</span>
                     </li>
                 </Link>
+                <Link to='/CreateNewBlog'>
+
                 <li>
                     <span className="link">
                             <i className='bx bxl-wordpress Meet'></i>
-                            <span className="links_name">Meet Moradiya</span>
+                            <span className="links_name">Request A Blog</span>
                     </span>
-                    <span className="tooltip">Meet Moradiya</span>
+                    <span className="tooltip">Request A Blog</span>
                 </li>
+                </Link>
             </ul>
         </div>
 

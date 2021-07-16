@@ -52,6 +52,7 @@ const App = () => {
           <Route path="/NodeJs" component={NodeJs} />
           <Route path="/Github" component={Github} />
           <Route path="/Sass" component={Sass} />
+          <Route path="/CreateNewBlog" component={CreateNewBlog} />
         </Switch>
       </div>
     </Router>
